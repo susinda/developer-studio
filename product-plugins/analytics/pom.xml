@@ -42,7 +42,7 @@
         <repository>
             <id>developerstudio-kernel</id>
             <layout>p2</layout>
-            <url>file:/home/susinda/Projects/wso2Git/wso2-devstudio/kernel/repository/target/wso2-developer-studio-kernel-p2_4.0.0-SNAPSHOT</url>
+            <url>http://builder1.us1.wso2.org/~developerstudio/developer-studio-kernel/4.0.0/M0/p2/</url>
         </repository>
 	<repository>
 	     <id>WSO2-Nexus-Maven-Repository</id>

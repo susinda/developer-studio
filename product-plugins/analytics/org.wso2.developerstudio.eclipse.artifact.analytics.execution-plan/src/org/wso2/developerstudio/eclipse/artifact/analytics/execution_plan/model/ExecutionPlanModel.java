@@ -36,7 +36,7 @@ import org.wso2.developerstudio.eclipse.logging.core.Logger;
 import org.wso2.developerstudio.eclipse.platform.core.exception.ObserverFailedException;
 import org.wso2.developerstudio.eclipse.platform.core.project.model.ProjectDataModel;
 
-public class Execution_planModel extends ProjectDataModel {
+public class ExecutionPlanModel extends ProjectDataModel {
 	
 	private static IDeveloperStudioLog log=Logger.getLog(Activator.PLUGIN_ID);
 	private IContainer execution_planSaveLocation;

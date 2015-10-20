@@ -18,15 +18,5 @@
 	<module>org.wso2.developerstudio.eclipse.artifact.analytics.receiver</module>
 	<module>org.wso2.developerstudio.eclipse.artifact.analytics.stream</module>
     </modules>
-
-   <repositories>
-        <repository>
-            <id>developerstudio-kernel</id>
-            <layout>p2</layout>
-            <url>file:/home/susinda/Projects/wso2Git/wso2-devstudio/kernel/repository/target/wso2-developer-studio_4.0.0</url>
-        </repository>
-    </repositories>
-
-
 </project>
 

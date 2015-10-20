@@ -27,7 +27,7 @@ import org.eclipse.core.runtime.CoreException;
 import org.eclipse.core.runtime.NullProgressMonitor;
 import org.wso2.developerstudio.eclipse.artifact.analytics.Activator;
 import org.wso2.developerstudio.eclipse.artifact.analytics.utils.AnalyticsConstants;
-//import org.wso2.developerstudio.eclipse.capp.maven.utils.MavenConstants;
+import org.wso2.developerstudio.eclipse.capp.maven.utils.MavenConstants;
 import org.wso2.developerstudio.eclipse.logging.core.IDeveloperStudioLog;
 import org.wso2.developerstudio.eclipse.logging.core.Logger;
 import org.wso2.developerstudio.eclipse.maven.util.MavenUtils;
@@ -70,71 +70,71 @@ public class AnalyticsProjectNature extends AbstractWSO2ProjectNature {
             Plugin plugin = MavenUtils.createPluginEntry(mavenProject, "org.codehaus.mojo", "exec-maven-plugin", "1.2", true);
             {
                 PluginExecution pluginExecution = new PluginExecution();
-//                pluginExecution.setId(MavenConstants.PACKAGE_PHASE);
-//                pluginExecution.addGoal(MavenConstants.EXEC_GOAL);
-//                pluginExecution.setPhase(MavenConstants.PACKAGE_PHASE);
-//
-//                Xpp3Dom configurationNode = MavenUtils.createMainConfigurationNode();
-//                Xpp3Dom executableNode = MavenUtils.createXpp3Node(configurationNode, MavenConstants.EXECUTABLE_TAG);
-//                executableNode.setValue(MavenConstants.EXECUTABLE_VALUE);
-//                Xpp3Dom workingDirectoryNode = MavenUtils.createXpp3Node(configurationNode,
-//                        MavenConstants.WORKING_DIRECTORY_TAG);
-//                workingDirectoryNode.setValue(MavenConstants.WORKING_DIRECTORY_VALUE);
-//                Xpp3Dom argumentsNode = MavenUtils.createXpp3Node(configurationNode, MavenConstants.ARGUMENTS_TAG);
-//                Xpp3Dom cleanArgumentNode = MavenUtils.createXpp3Node(argumentsNode, MavenConstants.ARGUMENT_TAG);
-//                cleanArgumentNode.setValue(MavenConstants.ARGUMENT_VALUE_CLEAN);
-//                Xpp3Dom installArgumentNode = MavenUtils.createXpp3Node(argumentsNode, MavenConstants.ARGUMENT_TAG);
-//                installArgumentNode.setValue(MavenConstants.PACKAGE_PHASE);
-//                Xpp3Dom testSkipArgumentNode = MavenUtils.createXpp3Node(argumentsNode, MavenConstants.ARGUMENT_TAG);
-//                testSkipArgumentNode.setValue(MavenConstants.ARGUMENT_VALUE_SKIP_TESTS);
+                pluginExecution.setId(MavenConstants.PACKAGE_PHASE);
+                pluginExecution.addGoal(MavenConstants.EXEC_GOAL);
+                pluginExecution.setPhase(MavenConstants.PACKAGE_PHASE);
 
-               // pluginExecution.setConfiguration(configurationNode);
+                Xpp3Dom configurationNode = MavenUtils.createMainConfigurationNode();
+                Xpp3Dom executableNode = MavenUtils.createXpp3Node(configurationNode, MavenConstants.EXECUTABLE_TAG);
+                executableNode.setValue(MavenConstants.EXECUTABLE_VALUE);
+                Xpp3Dom workingDirectoryNode = MavenUtils.createXpp3Node(configurationNode,
+                        MavenConstants.WORKING_DIRECTORY_TAG);
+                workingDirectoryNode.setValue(MavenConstants.WORKING_DIRECTORY_VALUE);
+                Xpp3Dom argumentsNode = MavenUtils.createXpp3Node(configurationNode, MavenConstants.ARGUMENTS_TAG);
+                Xpp3Dom cleanArgumentNode = MavenUtils.createXpp3Node(argumentsNode, MavenConstants.ARGUMENT_TAG);
+                cleanArgumentNode.setValue(MavenConstants.ARGUMENT_VALUE_CLEAN);
+                Xpp3Dom installArgumentNode = MavenUtils.createXpp3Node(argumentsNode, MavenConstants.ARGUMENT_TAG);
+                installArgumentNode.setValue(MavenConstants.PACKAGE_PHASE);
+                Xpp3Dom testSkipArgumentNode = MavenUtils.createXpp3Node(argumentsNode, MavenConstants.ARGUMENT_TAG);
+                testSkipArgumentNode.setValue(MavenConstants.ARGUMENT_VALUE_SKIP_TESTS);
 
-                plugin.addExecution(pluginExecution);
-            }
-            {
-                PluginExecution pluginExecution = new PluginExecution();
-//                pluginExecution.setId(MavenConstants.INSTALL_PHASE);
-//                pluginExecution.addGoal(MavenConstants.EXEC_GOAL);
-//                pluginExecution.setPhase(MavenConstants.INSTALL_PHASE);
-//
-//                Xpp3Dom configurationNode = MavenUtils.createMainConfigurationNode();
-//                Xpp3Dom executableNode = MavenUtils.createXpp3Node(configurationNode, MavenConstants.EXECUTABLE_TAG);
-//                executableNode.setValue(MavenConstants.EXECUTABLE_VALUE);
-//                Xpp3Dom workingDirectoryNode = MavenUtils.createXpp3Node(configurationNode,
-//                        MavenConstants.WORKING_DIRECTORY_TAG);
-//                workingDirectoryNode.setValue(MavenConstants.WORKING_DIRECTORY_VALUE);
-//                Xpp3Dom argumentsNode = MavenUtils.createXpp3Node(configurationNode, MavenConstants.ARGUMENTS_TAG);
-//                Xpp3Dom cleanArgumentNode = MavenUtils.createXpp3Node(argumentsNode, MavenConstants.ARGUMENT_TAG);
-//                cleanArgumentNode.setValue(MavenConstants.ARGUMENT_VALUE_CLEAN);
-//                Xpp3Dom installArgumentNode = MavenUtils.createXpp3Node(argumentsNode, MavenConstants.ARGUMENT_TAG);
-//                installArgumentNode.setValue(MavenConstants.INSTALL_PHASE);
-//                Xpp3Dom testSkipArgumentNode = MavenUtils.createXpp3Node(argumentsNode, MavenConstants.ARGUMENT_TAG);
-//                testSkipArgumentNode.setValue(MavenConstants.ARGUMENT_VALUE_SKIP_TESTS);
-//
-//                pluginExecution.setConfiguration(configurationNode);
+                pluginExecution.setConfiguration(configurationNode);
 
                 plugin.addExecution(pluginExecution);
             }
             {
                 PluginExecution pluginExecution = new PluginExecution();
-//                pluginExecution.setId(MavenConstants.DEPLOY_PHASE);
-//                pluginExecution.addGoal(MavenConstants.EXEC_GOAL);
-//                pluginExecution.setPhase(MavenConstants.DEPLOY_PHASE);
-//
-//                Xpp3Dom configurationNode = MavenUtils.createMainConfigurationNode();
-//                Xpp3Dom executableNode = MavenUtils.createXpp3Node(configurationNode, MavenConstants.EXECUTABLE_TAG);
-//                executableNode.setValue(MavenConstants.EXECUTABLE_VALUE);
-//                Xpp3Dom workingDirectoryNode = MavenUtils.createXpp3Node(configurationNode,
-//                        MavenConstants.WORKING_DIRECTORY_TAG);
-//                workingDirectoryNode.setValue(MavenConstants.WORKING_DIRECTORY_VALUE);
-//                Xpp3Dom argumentsNode = MavenUtils.createXpp3Node(configurationNode, MavenConstants.ARGUMENTS_TAG);
-//                Xpp3Dom deployArgumentNode = MavenUtils.createXpp3Node(argumentsNode, MavenConstants.ARGUMENT_TAG);
-//                deployArgumentNode.setValue(MavenConstants.DEPLOY_PHASE);
-//                Xpp3Dom testSkipArgumentNode = MavenUtils.createXpp3Node(argumentsNode, MavenConstants.ARGUMENT_TAG);
-//                testSkipArgumentNode.setValue(MavenConstants.ARGUMENT_VALUE_SKIP_TESTS);
-//
-//                pluginExecution.setConfiguration(configurationNode);
+                pluginExecution.setId(MavenConstants.INSTALL_PHASE);
+                pluginExecution.addGoal(MavenConstants.EXEC_GOAL);
+                pluginExecution.setPhase(MavenConstants.INSTALL_PHASE);
+
+                Xpp3Dom configurationNode = MavenUtils.createMainConfigurationNode();
+                Xpp3Dom executableNode = MavenUtils.createXpp3Node(configurationNode, MavenConstants.EXECUTABLE_TAG);
+                executableNode.setValue(MavenConstants.EXECUTABLE_VALUE);
+                Xpp3Dom workingDirectoryNode = MavenUtils.createXpp3Node(configurationNode,
+                        MavenConstants.WORKING_DIRECTORY_TAG);
+                workingDirectoryNode.setValue(MavenConstants.WORKING_DIRECTORY_VALUE);
+                Xpp3Dom argumentsNode = MavenUtils.createXpp3Node(configurationNode, MavenConstants.ARGUMENTS_TAG);
+                Xpp3Dom cleanArgumentNode = MavenUtils.createXpp3Node(argumentsNode, MavenConstants.ARGUMENT_TAG);
+                cleanArgumentNode.setValue(MavenConstants.ARGUMENT_VALUE_CLEAN);
+                Xpp3Dom installArgumentNode = MavenUtils.createXpp3Node(argumentsNode, MavenConstants.ARGUMENT_TAG);
+                installArgumentNode.setValue(MavenConstants.INSTALL_PHASE);
+                Xpp3Dom testSkipArgumentNode = MavenUtils.createXpp3Node(argumentsNode, MavenConstants.ARGUMENT_TAG);
+                testSkipArgumentNode.setValue(MavenConstants.ARGUMENT_VALUE_SKIP_TESTS);
+
+                pluginExecution.setConfiguration(configurationNode);
+
+                plugin.addExecution(pluginExecution);
+            }
+            {
+                PluginExecution pluginExecution = new PluginExecution();
+                pluginExecution.setId(MavenConstants.DEPLOY_PHASE);
+                pluginExecution.addGoal(MavenConstants.EXEC_GOAL);
+                pluginExecution.setPhase(MavenConstants.DEPLOY_PHASE);
+
+                Xpp3Dom configurationNode = MavenUtils.createMainConfigurationNode();
+                Xpp3Dom executableNode = MavenUtils.createXpp3Node(configurationNode, MavenConstants.EXECUTABLE_TAG);
+                executableNode.setValue(MavenConstants.EXECUTABLE_VALUE);
+                Xpp3Dom workingDirectoryNode = MavenUtils.createXpp3Node(configurationNode,
+                        MavenConstants.WORKING_DIRECTORY_TAG);
+                workingDirectoryNode.setValue(MavenConstants.WORKING_DIRECTORY_VALUE);
+                Xpp3Dom argumentsNode = MavenUtils.createXpp3Node(configurationNode, MavenConstants.ARGUMENTS_TAG);
+                Xpp3Dom deployArgumentNode = MavenUtils.createXpp3Node(argumentsNode, MavenConstants.ARGUMENT_TAG);
+                deployArgumentNode.setValue(MavenConstants.DEPLOY_PHASE);
+                Xpp3Dom testSkipArgumentNode = MavenUtils.createXpp3Node(argumentsNode, MavenConstants.ARGUMENT_TAG);
+                testSkipArgumentNode.setValue(MavenConstants.ARGUMENT_VALUE_SKIP_TESTS);
+
+                pluginExecution.setConfiguration(configurationNode);
 
                 plugin.addExecution(pluginExecution);
             }

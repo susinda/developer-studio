@@ -19,4 +19,5 @@ Import-Package: javax.xml.stream;version="1.0.1.wso2v1",
  org.eclipse.core.resources,
  org.wso2.developerstudio.eclipse.logging.core,
  org.wso2.developerstudio.eclipse.platform.core.interfaces,
+ org.wso2.developerstudio.eclipse.platform.core.manifest,
  org.wso2.developerstudio.eclipse.platform.core.mediatype
